@@ -116,7 +116,6 @@ export default defineComponent({
           label: '预览',
           icon: 'icon-preview',
           action: () => {
-            console.warn();
             bpmnContext
               .getXML()
               .then((response: { xml: string; }) => {
@@ -131,7 +130,6 @@ export default defineComponent({
                         mode: 'application/xml', // HMTL混合模式
                         theme: 'material',
                         lineNumbers: true,
-                        lint: true,
                         // theme: 'monokai', // 使用monokai模版
                       },
                     );
